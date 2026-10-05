@@ -8,7 +8,23 @@
     <body>
         <main>
             <div id="flag"></div>
+            <div id="inputs">
+                <input type="text" id="name" placeholder="Country Name">
+                <input type="text" id="capital" placeholder="Capital">
+                <input type="text" id="currency" placeholder="Currency">
+                <input type="text" id="callingCode" placeholder="Calling Code">
+                <input type="text" id="timezone" placeholder="Timezone">
+            </div>
+            <button id="check">Check</button>
             <button id="next">Next</button>
+            <div id="score">Score: 0</div>
+            <div id="settings">
+                <label><input type="checkbox" id="checkbox-name" checked>Name</label>
+                <label><input type="checkbox" id="checkbox-capital" checked>Capital</label>
+                <label><input type="checkbox" id="checkbox-callingCode" checked>Calling Code</label>
+                <label><input type="checkbox" id="checkbox-currency" checked>Currency</label>
+                <label><input type="checkbox" id="checkbox-timezone" checked>Timezone</label>
+            </div>
         </main>
         <script src="script.js"></script>
     </body>
