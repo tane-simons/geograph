@@ -4,27 +4,49 @@
         <meta charset="UTF-8">
         <title>Geograph</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="favicon.svg">
     </head>
     <body>
         <main>
-            <div id="flag"></div>
-            <div id="inputs">
-                <input type="text" id="name" placeholder="Country Name">
-                <input type="text" id="capital" placeholder="Capital">
-                <input type="text" id="currency" placeholder="Currency">
-                <input type="text" id="callingCode" placeholder="Calling Code">
-                <input type="text" id="timezone" placeholder="Timezone">
+            <header>
+                <img src="assets/logo.svg">
+            </header>
+            <div id="timer-and-score">
+                <div id="timer-container">
+                    <p>Time Remaining: </p>
+                    <p id="timer">2:00</p>
+                </div>
+                <div id="score-container">
+                    <div id="score">Score: 0</div>
+                    <div id="high-score">HIGH SCORE: 0</div>
+                </div>
             </div>
-            <button id="check">Check</button>
-            <button id="next">Next</button>
-            <div id="score">Score: 0</div>
-            <div id="settings">
-                <label><input type="checkbox" id="checkbox-name" checked>Name</label>
-                <label><input type="checkbox" id="checkbox-capital" checked>Capital</label>
-                <label><input type="checkbox" id="checkbox-callingCode" checked>Calling Code</label>
-                <label><input type="checkbox" id="checkbox-currency" checked>Currency</label>
-                <label><input type="checkbox" id="checkbox-timezone" checked>Timezone</label>
+            <div id="flag-and-info">
+                <div id="flag"></div>
+                <div id="info">
+                    <div id="inputs">
+                        <input type="text" id="name" placeholder="COUNTRY NAME">
+                        <input type="text" id="capital" placeholder="CAPITAL">
+                        <input type="text" id="currency" placeholder="CURRENCY (XYZ)">
+                        <input type="text" id="callingCode" placeholder="CALLING CODE (+)">
+                        <input type="text" id="timezone" placeholder="TIMEZONE (UTC+)">
+                    </div>
+                    <div id="buttons">
+                        <button id="edit-fields">Edit Fields</button>
+                        <button id="check">Check &rarr;</button>
+                        <button id="next">Next</button>
+                        <button id="play-again">Play Again &rarr;</button>
+                    </div>
+                    <div id="settings">
+                        <label><input type="checkbox" id="checkbox-name" checked>Name</label>
+                        <label><input type="checkbox" id="checkbox-capital" checked>Capital</label>
+                        <label><input type="checkbox" id="checkbox-currency" checked>Currency</label>
+                        <label><input type="checkbox" id="checkbox-callingCode" checked>Calling Code</label>
+                        <label><input type="checkbox" id="checkbox-timezone" checked>Timezone</label>
+                    </div>
+                </div>
             </div>
+            <img id="globe" src="assets/globe.svg">
         </main>
         <script src="script.js"></script>
     </body>

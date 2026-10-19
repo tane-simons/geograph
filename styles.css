@@ -1,9 +1,176 @@
-#flag {
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+@import url('https://fonts.cdnfonts.com/css/libre-bodoni-2');
+
+:root {
+    --primary: #674E28;
+}
+
+html {
+    background-color: #E3D4BE;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     width: 60vw;
-    height: 40vw;
+    max-width: 1920px;
+}
+
+header {
+    margin: 1rem 0 3rem 0;
+}
+
+header img {
+    width: 20rem;
+}
+
+#timer-and-score {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#timer-container {
+    color: var(--primary);
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+
+#timer {
+    font-weight: 700;
+}
+
+#score-container {
+    text-align: right;
+    color: var(--primary);
+}
+
+#flag-and-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: top;
+    margin: 2rem 0 0 0;
+}
+
+#flag {
+    width: 50%;
 }
 
 #flag img {
     max-width: 100%;
     max-height: 100%;
+    border-radius: 5% 98% 2% 98% / 98% 2% 98% 2%;
+}
+
+#score {
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-family: 'Libre Bodoni', serif;
+}
+
+#high-score {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+#info {
+    width: 40%;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+#inputs input {
+    border: none;
+    border-bottom: 2px var(--primary) solid;
+    background-color: transparent;
+    font-size: 100%;
+    font-weight: 700;
+    color: var(--primary);
+    padding: 0 0 0.5rem 0;
+    margin: 0 0 0.5rem 0;
+}
+
+#inputs input::placeholder {
+    color: var(--primary);
+    opacity: 0.4;
+    font-size: 100%;
+    font-weight: 700;
+}
+
+#inputs input:focus {
+    outline: none;
+}
+
+#buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 2rem 0 0 0;
+}
+
+#buttons button {
+    background-color: #A8B58D;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid rgba(12,21,4,0.43);
+    font-weight: 500;
+    color: #2E3825;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+#buttons #edit-fields {
+    background-color: #E1D6C4;
+    border-color: #b0a28a;
+    color: #4D3818;
+}
+
+#settings {
+    display: flex;
+    flex-direction: column;
+    background-color: #E1D6C4;
+    border: 1px solid #b0a28a;
+    color: #4D3818;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+    padding: 1rem;
+    border-radius: 5px;
+    position: relative;
+    top: 2%;
+    left: 0%;
+    width: fit-content;
+    z-index: 1;
+}
+
+#settings label {
+    padding: 0.5rem
+}
+
+#globe {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
 }
