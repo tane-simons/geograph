@@ -36,6 +36,7 @@ header img {
 #timer-and-score {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     width: 100%;
 }
 
@@ -43,7 +44,7 @@ header img {
     color: var(--primary);
     display: flex;
     gap: 1rem;
-    font-size: 1.5rem;
+    font-size: 2vw;
     font-weight: 500;
     display: flex;
     flex-direction: row;
@@ -70,6 +71,7 @@ header img {
 
 #flag {
     width: 50%;
+    aspect-ratio: 16 / 9;
 }
 
 #flag img {
@@ -79,14 +81,14 @@ header img {
 }
 
 #score {
-    font-size: 2.5rem;
+    font-size: 3vw;
     font-weight: 400;
     font-family: 'Libre Bodoni', serif;
 }
 
 #high-score {
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.4vw;
 }
 
 #info {
@@ -96,7 +98,7 @@ header img {
 #inputs {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1vh;
     width: 100%;
 }
 
@@ -104,11 +106,16 @@ header img {
     border: none;
     border-bottom: 2px var(--primary) solid;
     background-color: transparent;
-    font-size: 100%;
+    font-size: 1.2vw;
     font-weight: 700;
     color: var(--primary);
-    padding: 0 0 0.5rem 0;
-    margin: 0 0 0.5rem 0;
+    padding: 0 0 1vh 0;
+    margin: 0 0 1vh 0;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--primary);
+    margin-right: 0.5vw;
 }
 
 #inputs input::placeholder {
@@ -126,14 +133,14 @@ header img {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin: 2rem 0 0 0;
+    margin: 1.5vw 0 0 0;
 }
 
 #buttons button {
     background-color: #A8B58D;
     border: none;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2vw;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     border: 1px solid rgba(12,21,4,0.43);
@@ -149,8 +156,12 @@ header img {
     color: #4D3818;
 }
 
+#buttons #play-again, #buttons #next {
+    display: none;
+}
+
 #settings {
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: #E1D6C4;
     border: 1px solid #b0a28a;
@@ -173,4 +184,99 @@ header img {
     width: 100vw;
     position: absolute;
     bottom: 0;
+    z-index: -1;
+}
+
+@media screen and (max-width: 576px) {
+
+    #logo {
+        width: 20rem;
+    }
+
+    main {
+        width: 100vw;
+    }
+
+    #timer-and-score {
+        align-items: end;
+        width: 80vw;
+    }
+
+    #timer-container {
+        align-items: flex-start;
+        font-size: 4vw;
+        flex-direction: column;
+        gap: 1vw;
+    }
+
+    #timer {
+        font-weight: 500;
+    }
+
+    #score-container {
+        text-align: center;
+    }
+
+    #score {
+        font-size: 7vw;
+    }
+
+    #high-score {
+        font-size: 3vw;
+    }
+
+    #flag-and-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #flag {
+        width: 80%;
+        margin: 0 0 5vh 0;
+    }
+
+    #info {
+        width: 70%;
+    }
+
+    #buttons button {
+    font-size: 4vw;
+    }
+
+    #inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 100%;
+}
+
+    #inputs input {
+        border-bottom: 2px var(--primary) solid;
+        font-size: 4vw;
+        font-weight: 700;
+        color: var(--primary);
+        padding: 0 0 1vh 0;
+        margin: 0 0 1vh 0;
+    }
+
+    #inputs input::placeholder {
+        color: var(--primary);
+        font-size: 4vw;
+    }
+
+    input[type="checkbox"] {
+    margin-right: 2vw;
+    }
+
+    #globe {
+        display: none;
+    }
+
+    #settings {
+        top: -19rem;
+    }
+
+    #settings label {
+        font-size: 4vw;
+    }
 }

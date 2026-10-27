@@ -41,7 +41,8 @@ const customAnswers = { //for custom entries to be accepted
     "Tanzania, United Republic of":["Tanzania"],
     "Republic of Kosovo":["Kosovo"],
     "Russian Federation": ["Russia"],
-    "United States of America": ["USA", "United States", "US"]
+    "United States of America": ["USA", "United States", "US"],
+    "Iran (Islamic Republic of)": ["Iran"]
 };
 
 function checkAnswers() {
